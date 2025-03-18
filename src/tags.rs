@@ -72,7 +72,7 @@ pub enum HtmlTag {
     ListElement,
     /// A container for the main content on a page
     Main,
-    /// A container for the navigation contenton a page
+    /// A container for the navigation content on a page
     Navigation,
     /// An unordered, generally numbered, list
     OrderedList,
@@ -108,6 +108,20 @@ pub enum HtmlTag {
     UnorderedList,
     /// An embedded video element
     Video,
+    /// Subscript text (HTML: `<sub>`)
+    Subscript,
+    /// Superscript text (HTML: `<sup>`)
+    Superscript,
+    /// Inserted text (HTML: `<ins>`)
+    Insert,
+    /// Deleted text (HTML: `<del>`)
+    Delete,
+    /// Strong importance (HTML: `<strong>`)
+    Strong,
+    /// Emphasized text (HTML: `<em>`)
+    Emphasis,
+    /// Marked or highlighted text (HTML: `<mark>`)
+    Mark,
 }
 
 impl Display for HtmlTag {
@@ -168,6 +182,13 @@ impl HtmlTag {
             Self::TableRow => "tr",
             Self::UnorderedList => "ul",
             Self::Video => "video",
+            Self::Subscript => "sub",
+            Self::Superscript => "sup",
+            Self::Insert => "ins",
+            Self::Delete => "del",
+            Self::Strong => "strong",
+            Self::Emphasis => "em",
+            Self::Mark => "mark",
         }
     }
 }
